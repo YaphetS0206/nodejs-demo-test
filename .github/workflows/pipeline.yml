@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - demo-1
+      - master
 jobs:
 
   validation:
