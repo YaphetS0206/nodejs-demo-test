@@ -1,0 +1,10 @@
+name: Consume Distributed Validation Layer
+on:
+  push:
+    branches:
+      - master
+jobs:
+
+  validation:
+    uses: YaphetS0206/matrix-workflow/.github/workflows/distributed-validation.yml@demo-1
+    
