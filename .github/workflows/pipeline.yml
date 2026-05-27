@@ -2,7 +2,7 @@ name: Consume Distributed Validation Layer
 on:
   push:
     branches:
-      - master
+      - demo-1
 jobs:
 
   validation:
