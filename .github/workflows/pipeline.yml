@@ -17,3 +17,4 @@ jobs:
       artifact-name: 'app-demo-build'
     secrets:
       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }} 
+      
