@@ -4,7 +4,12 @@ on:
     branches: [master, develop]
   pull_request:
 
-jobs:
+    
+permissions:
+  contents: read
+  security-events: write
+
+  jobs:
   validation:
     uses: YaphetS0206/matrix-workflow/.github/workflows/distributed-validation.yml@demo-2
     with:
