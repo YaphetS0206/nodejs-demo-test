@@ -1,8 +1,12 @@
 name: Consume Distributed Validation Layer
 on:
-  push:
-    branches: [master, develop]
-  pull_request:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: 'The environment to deploy for'
+        default: 'dev'
+        required: true
+        type: string
 
 
 permissions:
