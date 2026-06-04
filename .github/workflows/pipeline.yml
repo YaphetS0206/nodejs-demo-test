@@ -16,6 +16,3 @@ jobs:
       python-versions: '[3.11, 3.12]'
       min-coverage: 80
       max-high-vulns: 0
-      run-semgrep: true
-      run-bandit: true
-      run-trivy: true
