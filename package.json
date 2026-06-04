@@ -12,7 +12,11 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "build": "echo 'No build step needed'"
+    "build": "echo 'No build step needed'",
+   "test:integration": "jest tests/integration --runInBand",
+   "test:integration:postgres": "DB_TYPE=postgres npm run test:integration",
+   "test:integration:mysql": "DB_TYPE=mysql npm run test:integration",  
+   "test:integration:sqlite": "DB_TYPE=sqlite npm run test:integration"
   },
   "dependencies": {
     "express": "^4.18.2"
