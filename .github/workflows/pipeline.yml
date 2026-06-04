@@ -1,13 +1,16 @@
 name: Consume Distributed Validation Layer
 on:
   push:
-    branches:
-      - master
+    branches: [master, develop]
+  pull_request:
 
 jobs:
   validation:
     uses: YaphetS0206/matrix-workflow/.github/workflows/distributed-validation.yml@demo-2
     with:
       node-versions: '[18, 20, 22]'
+      min-coverage: 80
+      max-high-vulns: 0
+      run-semgrep: true
     secrets:
-      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }} 
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
