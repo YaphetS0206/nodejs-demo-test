@@ -12,5 +12,3 @@ jobs:
       min-coverage: 80
       max-high-vulns: 0
       run-semgrep: true
-    secrets:
-      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
