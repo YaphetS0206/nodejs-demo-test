@@ -2,11 +2,25 @@ name: Consume Distributed Validation Layer
 on:
   push:
     branches:
-      - demo-1
       - master
-jobs:
 
+# Permisos mínimos necesarios
+permissions:
+  contents: read
+  checks: write
+
+
+jobs:
   validation:
-    uses: YaphetS0206/matrix-workflow/.github/workflows/distributed-validation.yml@demo-1
-    
+    uses: YaphetS0206/matrix-workflow/.github/workflows/distributed-validation.yml@demo-2
+    with:
+      node-versions: '[18, 20, 22]'
+      operating-systems: '["ubuntu-latest", "windows-latest"]'
+      run-lint: true
+      run-audit: true
+      run-snyk: true
+      upload-artifact: true
+      artifact-name: 'app-demo-build'
+    secrets:
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
     
