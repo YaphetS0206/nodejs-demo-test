@@ -2,13 +2,7 @@ name: Consume Distributed Validation Layer
 on:
   push:
     branches:
-      - master
-
-# Permisos mínimos necesarios
-permissions:
-  contents: read
-  checks: write
-
+      - demo-2
 
 jobs:
   validation:
@@ -22,5 +16,4 @@ jobs:
       upload-artifact: true
       artifact-name: 'app-demo-build'
     secrets:
-      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-    
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }} 
